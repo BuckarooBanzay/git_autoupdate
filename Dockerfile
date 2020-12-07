@@ -10,5 +10,6 @@ RUN apk add git
 # add local files
 COPY ./entrypoint.sh /entrypoint.sh
 COPY ./jobs/update.sh /etc/periodic/minute/update
+RUN chmod 755 /etc/periodic/minute/update
 
 CMD ["/entrypoint.sh"]
