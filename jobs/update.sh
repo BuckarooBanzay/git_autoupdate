@@ -18,7 +18,7 @@ function update_submodules() {
 }
 
 # initial clone
-test -d ${GIT_URL}/.git || {
+test -d ${GIT_DIR}/.git || {
 	echo "Doing an initial clone"
 	git clone ${GIT_URL} -b ${GIT_BRANCH} ${GIT_DIR}/
 	update_submodules
